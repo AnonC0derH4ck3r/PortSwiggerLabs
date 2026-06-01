@@ -8,8 +8,6 @@ SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 
 The goal is to perform a SQL injection attack that causes the application to display one or more unreleased products.
 
-**Lab URL** — https://0a1300ed048db5548053fd0b000f00d9.web-security-academy.net/filter?category=Pets
-
 ---
 
 ## 1. Detection
