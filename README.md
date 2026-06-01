@@ -38,11 +38,13 @@ lab-3.md
 
 ---
 
-## By
-- Huzefa Khalil Ahmed Dayanji
-
 ## Prerequisites
 
 - Basic understanding of SQL
 - Familiarity with HTTP requests (Burp Suite recommended)
 - A free [PortSwigger Academy](https://portswigger.net/web-security) account to follow along
+
+---
+
+## Author
+- Huzefa Khalil Ahmed Dayanji
