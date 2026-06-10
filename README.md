@@ -1,56 +1,98 @@
-# SQL Injection — Solved Labs
+# PortSwigger Web Security Academy — Solved Labs
 
-This repository contains write-ups and solutions for all SQL injection labs from [PortSwigger Web Security Academy](https://portswigger.net/web-security/sql-injection).
+This repository contains write-ups and solutions for labs from PortSwigger Web Security Academy.
 
-Each lab includes a step-by-step breakdown covering detection, exploitation, and the final payload used to solve it.
+Each lab includes a step-by-step breakdown covering vulnerability identification, exploitation, and the payloads used to solve the challenge.
 
 ---
 
-## What's Covered
+## Current Coverage
 
-- Retrieving hidden data via WHERE clause manipulation
-- Subverting application logic
-- UNION-based attacks for extracting data from other tables
-- Examining the database type and structure
-- Blind SQL injection (boolean-based and time-based)
-- And more
+### SQL Injection (SQLi)
+
+* Retrieving hidden data via WHERE clause manipulation
+* Authentication bypass
+* Database fingerprinting and version enumeration
+* Database structure enumeration
+* UNION-based data extraction
+* And more
+
+---
+
+## Planned Categories
+
+Additional lab categories will be added over time, including:
+
+* Cross-Site Scripting (XSS)
+* Cross-Site Request Forgery (CSRF)
+* Server-Side Request Forgery (SSRF)
+* XML External Entity Injection (XXE)
+* Access Control Vulnerabilities
+* Authentication Vulnerabilities
+* Business Logic Vulnerabilities
+* File Upload Vulnerabilities
+* Path Traversal
+* Deserialization
+* Web Cache Poisoning
+* And other topics covered by PortSwigger Web Security Academy
 
 ---
 
 ## Structure
 
-Each lab is a standalone markdown file named sequentially.
-
+```text
+sqli/
+├── lab-1.md
+├── lab-2.md
+├── lab-3.md
+├── ...
+└── lab-9.md
 ```
-lab-1.md
-lab-2.md
-lab-3.md
+
+As more categories are completed, the repository will be organized as:
+
+```text
+sqli/
+xss/
+csrf/
+ssrf/
+xxe/
 ...
 ```
 
-## Labs
+---
 
-| Lab | Topic |
-|-----|-------|
-| [lab-1.md](./lab-1.md) | SQL injection vulnerability in WHERE clause allowing retrieval of hidden data |
-| [lab-2.md](./lab-2.md) | SQL injection vulnerability allowing login bypass |
-| [lab-3.md](./lab-3.md) | SQL injection attack, querying the database type and version on Oracle |
-| [lab-4.md](./lab-4.md) | SQL injection attack, querying the database type and version on MySQL and Microsoft |
-| [lab-5.md](./lab-5.md) | SQL injection attack, listing database contents on non-Oracle databases |
-| [lab-6.md](./lab-6.md) | SQL injection attack, listing the database contents on Oracle |
-| [lab-7.md](./lab-7.md) | SQL injection UNION attack, determining the number of columns returned by the query |
-| [lab-8.md](./lab-8.md) | SQL injection UNION attack, finding a column containing text |
-| [lab-9.md](./lab-9.md) | SQL injection UNION attack, retrieving data from other tables |
+## SQL Injection Labs
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [sqli/lab-1.md](./sqli/lab-1.md) | SQL injection vulnerability in WHERE clause allowing retrieval of hidden data       |
+| [sqli/lab-2.md](./sqli/lab-2.md) | SQL injection vulnerability allowing login bypass                                   |
+| [sqli/lab-3.md](./sqli/lab-3.md) | SQL injection attack, querying the database type and version on Oracle              |
+| [sqli/lab-4.md](./sqli/lab-4.md) | SQL injection attack, querying the database type and version on MySQL and Microsoft |
+| [sqli/lab-5.md](./sqli/lab-5.md) | SQL injection attack, listing database contents on non-Oracle databases             |
+| [sqli/lab-6.md](./sqli/lab-6.md) | SQL injection attack, listing database contents on Oracle                           |
+| [sqli/lab-7.md](./sqli/lab-7.md) | SQL injection UNION attack, determining the number of columns returned by the query |
+| [sqli/lab-8.md](./sqli/lab-8.md) | SQL injection UNION attack, finding a column containing text                        |
+| [sqli/lab-9.md](./sqli/lab-9.md) | SQL injection UNION attack, retrieving data from other tables                       |
 
 ---
 
 ## Prerequisites
 
-- Basic understanding of SQL
-- Familiarity with HTTP requests (Burp Suite recommended)
-- A free [PortSwigger Academy](https://portswigger.net/web-security) account to follow along
+* Basic understanding of SQL
+* Familiarity with HTTP requests
+* Burp Suite (Community or Professional)
+* A free PortSwigger Web Security Academy account
+
+---
+
+## Disclaimer
+
+These write-ups are intended for educational purposes and should only be used against systems that you own or have explicit permission to test.
 
 ---
 
 ## Author
-- Huzefa Khalil Ahmed Dayanji
+
+**Huzefa Khalil Ahmed Dayanji**
