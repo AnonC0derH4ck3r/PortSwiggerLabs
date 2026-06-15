@@ -84,6 +84,7 @@ xxe/
 | [fuv/lab-1.md](./fuv/lab-1.md)   | Remote code execution via web shell upload                                          |
 | [fuv/lab-2.md](./fuv/lab-2.md)   | Web shell upload via Content-Type restriction bypass                                          |
 | [fuv/lab-3.md](./fuv/lab-3.md)   | Web shell upload via path traversal                                          |
+| [fuv/lab-4.md](./fuv/lab-4.md)   | Web shell upload via extension blacklist bypass                                          |
 
 ---
 
