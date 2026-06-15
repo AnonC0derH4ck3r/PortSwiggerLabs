@@ -112,12 +112,12 @@ The file avatars/test.txt has been uploaded.
 .shtml
 ```
 
-- With the `Content-Type` set to `image/png` for all requests and the file body containing `<?php echo 7*7; ?>`, I launched the attack and observed the results.
+- With the `Content-Type` set to `image/png` for all requests and the file body containing `<?php echo 1+1; ?>`, I launched the attack and observed the results.
 - From the Intruder results, two extensions returned **403 Forbidden** — meaning they were explicitly blacklisted by the server:
   - `.php`
   - `.phtml`
 - All other extensions returned **200 OK** and the file was accepted. However, visiting `/files/avatars/cat.<ext>` for each of those extensions (`.php2`, `.php3`, `.php4`, `.php5`, etc.) returned the raw PHP source code as plain text — meaning the server uploaded the file but did not execute it through the PHP interpreter.
-- Only **`.phar`** was different — visiting `/files/avatars/cat.phar` returned `49`, confirming the PHP code was actually executed on the server.
+- Only **`.phar`** was different — visiting `/files/avatars/cat.phar` returned `2`, confirming the PHP code was actually executed on the server.
 
 ---
 
