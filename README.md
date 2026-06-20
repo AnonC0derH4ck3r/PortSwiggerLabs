@@ -62,7 +62,7 @@ xxe/
 
 ---
 
-## SQL Injection Labs
+## SQL Injection Labs (Pending...)
 
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ xxe/
 | [sqli/lab-9.md](./sqli/lab-9.md) | SQL injection UNION attack, retrieving data from other tables                       |
 | [sqli/lab-10.md](./sqli/lab-10.md) | SQL injection UNION attack, retrieving multiple values in a single column                       |
 
-## File Upload Vulnerabilities
+## File Upload Vulnerabilities (Completed)
 
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
