@@ -76,6 +76,8 @@ xxe/
 | [sqli/lab-8.md](./sqli/lab-8.md) | SQL injection UNION attack, finding a column containing text                        |
 | [sqli/lab-9.md](./sqli/lab-9.md) | SQL injection UNION attack, retrieving data from other tables                       |
 | [sqli/lab-10.md](./sqli/lab-10.md) | SQL injection UNION attack, retrieving multiple values in a single column                       |
+| [sqli/lab-11.md](./sqli/lab-11.md) | Blind SQL injection with time delays                       |
+| [sqli/lab-12.md](./sqli/lab-12.md) | Blind SQL injection with time delays and information retrieval                       |
 
 ## File Upload Vulnerabilities (Completed)
 
