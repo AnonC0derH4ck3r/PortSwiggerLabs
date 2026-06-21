@@ -96,6 +96,10 @@ xxe/
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [xss/lab-1.md](./xss/lab-1.md)   | Reflected XSS into HTML context with nothing encoded                                |
+| [xss/lab-2.md](./xss/lab-2.md)   | Stored XSS into HTML context with nothing encoded                                   |
+| [xss/lab-3.md](./xss/lab-3.md)   | DOM XSS in document.write sink using source location.search                         |
+| [xss/lab-4.md](./xss/lab-4.md)   | DOM XSS in innerHTML sink using source location.search                              |
+| [xss/lab-5.md](./xss/lab-5.md)   | DOM XSS in jQuery anchor href attribute sink using location.search source           |
 
 ---
 
