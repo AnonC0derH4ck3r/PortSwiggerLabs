@@ -91,6 +91,12 @@ xxe/
 | [fuv/lab-6.md](./fuv/lab-6.md)   | Remote code execution via polyglot web shell upload                                          |
 | [fuv/lab-7.md](./fuv/lab-7.md)   | Web shell upload via race condition                                          |
 
+## Cross-Site Scripting (XSS) (Completed)
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [xss/lab-1.md](./xss/lab-1.md)   | Reflected XSS into HTML context with nothing encoded                                |
+
 ---
 
 ## Prerequisites
