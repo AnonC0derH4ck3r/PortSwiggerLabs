@@ -100,6 +100,7 @@ xxe/
 | [xss/lab-3.md](./xss/lab-3.md)   | DOM XSS in document.write sink using source location.search                         |
 | [xss/lab-4.md](./xss/lab-4.md)   | DOM XSS in innerHTML sink using source location.search                              |
 | [xss/lab-5.md](./xss/lab-5.md)   | DOM XSS in jQuery anchor href attribute sink using location.search source           |
+| [xss/lab-6.md](./xss/lab-6.md)   | DOM XSS in jQuery selector sink using a hashchange event                            |
 
 ---
 
