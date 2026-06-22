@@ -6,7 +6,7 @@ This lab contains a stored cross-site scripting vulnerability in the comment fun
 
 # 1. Detection
 
-- Accessed the lab and opened one of the blog posts (`post?postId=9`). The page had a comments section at the bottom with existing comments from other users.
+- Accessed the lab and opened one of the blog posts (`post?postId=7`). The page had a comments section at the bottom with existing comments from other users.
 - ![Blog Post with Comments](./pocs/poc-8.0.png)
 - Scrolled down and found the "Leave a comment" form. It had fields for Comment, Name, Email, and Website.
 - ![Empty Comment Form](./pocs/poc-8.1.png)
