@@ -102,6 +102,7 @@ xxe/
 | [xss/lab-5.md](./xss/lab-5.md)   | DOM XSS in jQuery anchor href attribute sink using location.search source           |
 | [xss/lab-6.md](./xss/lab-6.md)   | DOM XSS in jQuery selector sink using a hashchange event                            |
 | [xss/lab-7.md](./xss/lab-7.md)   | Reflected XSS into attribute with angle brackets HTML-encoded                       |
+| [xss/lab-8.md](./xss/lab-8.md)   | Stored XSS into anchor href attribute with double quotes HTML-encoded               |
 
 ---
 
