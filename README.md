@@ -112,6 +112,13 @@ xxe/
 | [os-ce/lab-2.md](./os-ce/lab-2.md)   | Blind OS command injection with time delays                                     |
 | [os-ce/lab-3.md](./os-ce/lab-3.md)   | Blind OS command injection with output redirection                              |
 
+## GraphQL Vulnerabilities
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [graphql/lab-1.md](./graphql/lab-1.md)   | Accessing private GraphQL posts                                               |
+| [graphql/lab-2.md](./graphql/lab-2.md)   | Accidental exposure of private GraphQL fields                                  |
+
 ---
 
 ## Prerequisites
