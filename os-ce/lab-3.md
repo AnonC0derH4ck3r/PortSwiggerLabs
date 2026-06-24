@@ -117,5 +117,5 @@ submitFeedbackAndLogImage();
 
 > **Why this works:** The `email` field's value is concatenated directly into a shell command on the backend without sanitization. The injected `;` terminates the original command, `whoami` runs and its output is redirected with `>` into a file inside `/var/www/images/` — a directory that's already served statically by the application's image endpoint. Since the command's output never reaches the HTTP response directly, redirecting it to a file inside a publicly accessible directory turns the blind injection into a readable one.
 
-- The console printed the contents of `out.txt`, revealing the current user.
+- The console printed the contents of `out.txt`, revealing the current user `peter-WHokno`.
 - Lab solved.
