@@ -104,6 +104,12 @@ xxe/
 | [xss/lab-7.md](./xss/lab-7.md)   | Reflected XSS into attribute with angle brackets HTML-encoded                       |
 | [xss/lab-8.md](./xss/lab-8.md)   | Stored XSS into anchor href attribute with double quotes HTML-encoded               |
 
+## OS Command Injection
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [os-ce/lab-1.md](./os-ce/lab-1.md)   | OS command injection, simple case                                                   |
+
 ---
 
 ## Prerequisites
