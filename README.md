@@ -110,6 +110,7 @@ xxe/
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [os-ce/lab-1.md](./os-ce/lab-1.md)   | OS command injection, simple case                                               |
 | [os-ce/lab-2.md](./os-ce/lab-2.md)   | Blind OS command injection with time delays                                     |
+| [os-ce/lab-3.md](./os-ce/lab-3.md)   | Blind OS command injection with output redirection                              |
 
 ---
 
