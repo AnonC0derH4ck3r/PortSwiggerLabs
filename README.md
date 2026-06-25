@@ -119,6 +119,12 @@ xxe/
 | [graphql/lab-1.md](./graphql/lab-1.md)   | Accessing private GraphQL posts                                               |
 | [graphql/lab-2.md](./graphql/lab-2.md)   | Accidental exposure of private GraphQL fields                                  |
 
+## HTTP Header Attacks
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [hha/lab-1.md](./hha/lab-1.md)   | Basic password reset poisoning                                               |
+
 ---
 
 ## Prerequisites
