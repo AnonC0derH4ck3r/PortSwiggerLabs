@@ -103,6 +103,10 @@ xxe/
 | [xss/lab-6.md](./xss/lab-6.md)   | DOM XSS in jQuery selector sink using a hashchange event                            |
 | [xss/lab-7.md](./xss/lab-7.md)   | Reflected XSS into attribute with angle brackets HTML-encoded                       |
 | [xss/lab-8.md](./xss/lab-8.md)   | Stored XSS into anchor href attribute with double quotes HTML-encoded               |
+| [xss/lab-9.md](./xss/lab-9.md)   | Reflected XSS into a JavaScript string with angle brackets HTML encoded             |
+| [xss/lab-10.md](./xss/lab-10.md)   | DOM XSS in document.write sink using source location.search inside a select element               |
+| [xss/lab-11.md](./xss/lab-11.md)   | DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded               |
+| [xss/lab-12.md](./xss/lab-12.md)   | Reflected DOM XSS                                                                 |
 
 ## OS Command Injection
 
