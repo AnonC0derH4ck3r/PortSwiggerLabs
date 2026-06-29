@@ -129,6 +129,7 @@ xxe/
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [hha/lab-1.md](./hha/lab-1.md)   | Basic password reset poisoning                                               |
+| [hha/lab-2.md](./hha/lab-2.md)   | Host header authentication bypass                                               |
 
 ---
 
