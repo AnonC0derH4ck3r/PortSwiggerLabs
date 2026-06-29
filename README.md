@@ -136,6 +136,7 @@ xxe/
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [jwt/lab-1.md](./jwt/lab-1.md)   | JWT authentication bypass via unverified signature                                  |
+| [jwt/lab-2.md](./jwt/lab-2.md)   | JWT authentication bypass via flawed signature verification                         |
 
 ---
 
