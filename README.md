@@ -131,6 +131,12 @@ xxe/
 | [hha/lab-1.md](./hha/lab-1.md)   | Basic password reset poisoning                                               |
 | [hha/lab-2.md](./hha/lab-2.md)   | Host header authentication bypass                                               |
 
+## JWT Vulnerabilities
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [jwt/lab-1.md](./jwt/lab-1.md)   | JWT authentication bypass via unverified signature                                  |
+
 ---
 
 ## Prerequisites
