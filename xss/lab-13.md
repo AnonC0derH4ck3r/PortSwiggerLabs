@@ -9,7 +9,7 @@ This lab demonstrates a stored DOM vulnerability in the blog comment functionali
 - Accessed the lab. The home page listed multiple posts. Clicked on one of them, navigating to `/post?postId=1`.
 - The post page had a form to leave a comment.
 
-![Leave a comment form](./pocs/poc-13.7.png)
+![Leave a comment form](./pocs/poc-13.1.png)
 
 - Submitted a test comment to see how the application processes and renders it, using the payload `<i>Hello</i>` in the comment field.
 - The output was unexpected — inspecting the rendered comment showed only the opening `<i>` tag had been escaped, while the closing `</i>` tag had not:
