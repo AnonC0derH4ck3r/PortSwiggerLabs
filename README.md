@@ -107,6 +107,7 @@ xxe/
 | [xss/lab-10.md](./xss/lab-10.md)   | DOM XSS in document.write sink using source location.search inside a select element               |
 | [xss/lab-11.md](./xss/lab-11.md)   | DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded               |
 | [xss/lab-12.md](./xss/lab-12.md)   | Reflected DOM XSS                                                                 |
+| [xss/lab-13.md](./xss/lab-13.md)   | Stored DOM XSS                                                                 |
 
 ## OS Command Injection
 
