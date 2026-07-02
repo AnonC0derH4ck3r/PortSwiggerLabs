@@ -108,6 +108,7 @@ xxe/
 | [xss/lab-11.md](./xss/lab-11.md)   | DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded               |
 | [xss/lab-12.md](./xss/lab-12.md)   | Reflected DOM XSS                                                                 |
 | [xss/lab-13.md](./xss/lab-13.md)   | Stored DOM XSS                                                                 |
+| [xss/lab-14.md](./xss/lab-14.md)   | Reflected XSS into HTML context with all tags blocked except custom ones                                                                 |
 
 ## OS Command Injection
 
