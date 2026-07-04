@@ -1,0 +1,5 @@
+{
+  "kty": "oct",
+  "k": "c2VjcmV0MQ",
+  "alg": "HS256"
+}
