@@ -215,13 +215,3 @@ I navigated to `/admin`, which listed the option to delete users. I located the 
 ```
 
 Sending a `GET` request to this endpoint deleted the `carlos` account and solved the lab.
-
-## Root Cause
-
-The application signs and verifies JWTs using a weak, dictionary-guessable secret key (`secret1`). Since HMAC-based JWT signatures rely entirely on the secrecy of this key, anyone who recovers it can forge arbitrary tokens with any claims, including privilege-escalating claims such as `sub: administrator`.
-
-## Remediation
-
-- Use a long, high-entropy secret for HMAC signing, or switch to asymmetric signing (for example, RS256) so the verification key does not need to be kept secret.
-- Never derive signing secrets from dictionary words, short strings, or predictable values.
-- Rotate signing keys periodically and store them securely, separate from application source code.
