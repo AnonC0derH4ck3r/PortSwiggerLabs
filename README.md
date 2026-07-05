@@ -139,6 +139,7 @@ xxe/
 | [jwt/lab-1.md](./jwt/lab-1.md)   | JWT authentication bypass via unverified signature                                  |
 | [jwt/lab-2.md](./jwt/lab-2.md)   | JWT authentication bypass via flawed signature verification                         |
 | [jwt/lab-3.md](./jwt/lab-3.md)   | JWT Authentication Bypass via Weak Signing Key                                      |
+| [jwt/lab-4.md](./jwt/lab-4.md)   | JWT Authentication Bypass via JWK Header Injection                                  |
 
 ---
 
