@@ -155,6 +155,12 @@ xxe/
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [csrf/lab-1.md](./csrf/lab-1.md) | CSRF vulnerability with no defenses                                                 |
 
+## HTTP Request Smuggling/CRLF Attack
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [crlf/lab-1.md](./crlf/lab-1.md) | HTTP request smuggling, confirming a CL.TE vulnerability via differential responses |
+
 ---
 
 ## Prerequisites
