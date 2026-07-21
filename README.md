@@ -141,6 +141,14 @@ xxe/
 | [jwt/lab-3.md](./jwt/lab-3.md)   | JWT Authentication Bypass via Weak Signing Key                                      |
 | [jwt/lab-4.md](./jwt/lab-4.md)   | JWT Authentication Bypass via JWK Header Injection                                  |
 
+## Authentication Vulnerabilities
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [auth/lab-1.md](./auth/lab-1.md) | Username enumeration via different responses                                        |
+| [auth/lab-2.md](./auth/lab-2.md) | 2FA simple bypass                                                                   |
+| [auth/lab-3.md](./auth/lab-3.md) | Password reset broken logic                                                         |
+
 ---
 
 ## Prerequisites
