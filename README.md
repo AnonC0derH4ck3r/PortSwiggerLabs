@@ -149,7 +149,7 @@ xxe/
 | [auth/lab-2.md](./auth/lab-2.md) | 2FA simple bypass                                                                   |
 | [auth/lab-3.md](./auth/lab-3.md) | Password reset broken logic                                                         |
 
-## Authentication Vulnerabilities
+## Cross-Site Request Forgery
 
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
