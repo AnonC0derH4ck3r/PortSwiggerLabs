@@ -149,6 +149,12 @@ xxe/
 | [auth/lab-2.md](./auth/lab-2.md) | 2FA simple bypass                                                                   |
 | [auth/lab-3.md](./auth/lab-3.md) | Password reset broken logic                                                         |
 
+## Authentication Vulnerabilities
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [csrf/lab-1.md](./csrf/lab-1.md) | CSRF vulnerability with no defenses                                                 |
+
 ---
 
 ## Prerequisites
