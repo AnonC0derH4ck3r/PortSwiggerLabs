@@ -154,6 +154,7 @@ xxe/
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [csrf/lab-1.md](./csrf/lab-1.md) | CSRF vulnerability with no defenses                                                 |
+| [csrf/lab-2.md](./csrf/lab-2.md) | CSRF where token validation depends on request method                               |
 
 ## HTTP Request Smuggling/CRLF Attack
 
