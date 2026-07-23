@@ -155,6 +155,9 @@ xxe/
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [csrf/lab-1.md](./csrf/lab-1.md) | CSRF vulnerability with no defenses                                                 |
 | [csrf/lab-2.md](./csrf/lab-2.md) | CSRF where token validation depends on request method                               |
+| [csrf/lab-3.md](./csrf/lab-3.md) | CSRF where token validation depends on token being present                          |
+| [csrf/lab-4.md](./csrf/lab-4.md) | CSRF where token is not tied to user session                                        |
+| [csrf/lab-5.md](./csrf/lab-5.md) | CSRF where token is tied to non-session cookie                                      |
 
 ## HTTP Request Smuggling/CRLF Attack
 
