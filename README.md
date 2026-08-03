@@ -160,6 +160,7 @@ xxe/
 | [csrf/lab-5.md](./csrf/lab-5.md) | CSRF where token is tied to non-session cookie                                      |
 | [csrf/lab-6.md](./csrf/lab-6.md) | CSRF where token is duplicated in cookie                                            |
 | [csrf/lab-7.md](./csrf/lab-7.md) | SameSite Lax Bypass via Method Override                                             |
+| [csrf/lab-8.md](./csrf/lab-8.md) | SameSite Strict bypass via client-side redirect                                     |
 
 ## HTTP Request Smuggling/CRLF Attack
 
