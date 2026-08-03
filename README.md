@@ -158,6 +158,7 @@ xxe/
 | [csrf/lab-3.md](./csrf/lab-3.md) | CSRF where token validation depends on token being present                          |
 | [csrf/lab-4.md](./csrf/lab-4.md) | CSRF where token is not tied to user session                                        |
 | [csrf/lab-5.md](./csrf/lab-5.md) | CSRF where token is tied to non-session cookie                                      |
+| [csrf/lab-6.md](./csrf/lab-6.md) | SameSite Lax Bypass via Method Override                                             |
 
 ## HTTP Request Smuggling/CRLF Attack
 
