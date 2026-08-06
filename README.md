@@ -173,6 +173,12 @@ xxe/
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [bac/lab-1.md](./bac/lab-1.md)   | Unprotected admin functionality                                                     |
+| [bac/lab-2.md](./bac/lab-2.md)   | Unprotected Admin Functionality with Unpredictable URL                              |
+| [bac/lab-3.md](./bac/lab-3.md)   | User Role Controlled by Request Parameter                                           |
+| [bac/lab-4.md](./bac/lab-4.md)   | User Role Can Be Modified in User Profile                                           |
+| [bac/lab-5.md](./bac/lab-5.md)   | User ID Controlled by Request Parameter                                             |
+| [bac/lab-6.md](./bac/lab-6.md)   | User ID Controlled by Request Parameter, with Unpredictable User IDs                |
+| [bac/lab-7.md](./bac/lab-7.md)   | User ID Controlled by Request Parameter with Data Leakage in Redirect               |
 
 ---
 
