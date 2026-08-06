@@ -180,6 +180,7 @@ xxe/
 | [bac/lab-6.md](./bac/lab-6.md)   | User ID Controlled by Request Parameter, with Unpredictable User IDs                |
 | [bac/lab-7.md](./bac/lab-7.md)   | User ID Controlled by Request Parameter with Data Leakage in Redirect               |
 | [bac/lab-8.md](./bac/lab-8.md)   | User ID controlled by request parameter with password disclosure                    |
+| [bac/lab-9.md](./bac/lab-9.md)   | Insecure direct object references                                                   |
 
 ---
 
