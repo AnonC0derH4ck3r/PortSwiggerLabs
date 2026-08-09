@@ -182,6 +182,7 @@ xxe/
 | [bac/lab-8.md](./bac/lab-8.md)   | User ID controlled by request parameter with password disclosure                    |
 | [bac/lab-9.md](./bac/lab-9.md)   | Insecure direct object references                                                   |
 | [bac/lab-10.md](./bac/lab-10.md) | URL-Based Access Control Can Be Circumvented                                        |
+| [bac/lab-11.md](./bac/lab-11.md) | Method-based access control can be circumvented                                     |
 
 ---
 
