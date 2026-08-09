@@ -168,7 +168,7 @@ xxe/
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [crlf/lab-1.md](./crlf/lab-1.md) | HTTP request smuggling, confirming a CL.TE vulnerability via differential responses |
 
-## Access Control Vulnerabilities
+## Access Control Vulnerabilities (Completed)
 
 | Lab                              | Topic                                                                               |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
