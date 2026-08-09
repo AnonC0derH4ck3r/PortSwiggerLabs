@@ -184,6 +184,7 @@ xxe/
 | [bac/lab-10.md](./bac/lab-10.md) | URL-Based Access Control Can Be Circumvented                                        |
 | [bac/lab-11.md](./bac/lab-11.md) | Method-based access control can be circumvented                                     |
 | [bac/lab-12.md](./bac/lab-12.md) | Multi-Step Process with No Access Control on One Step                               |
+| [bac/lab-13.md](./bac/lab-13.md) | Referer-Based Access Control                                                        |
 
 ---
 
