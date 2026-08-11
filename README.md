@@ -186,6 +186,14 @@ xxe/
 | [bac/lab-12.md](./bac/lab-12.md) | Multi-Step Process with No Access Control on One Step                               |
 | [bac/lab-13.md](./bac/lab-13.md) | Referer-Based Access Control                                                        |
 
+
+## Web Cache Deception
+
+| Lab                              | Topic                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| [wcd/lab-1.md](./wcd/lab-1.md)   | Exploiting Path Mapping for Web Cache Deception                                     |
+| [wcd/lab-2.md](./wcd/lab-2.md)   | Exploiting Path Delimiters for Web Cache Deception                                  |
+
 ---
 
 ## Prerequisites
