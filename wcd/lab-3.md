@@ -4,15 +4,15 @@ To solve the lab, find the API key for the user `carlos`.
 
 You can log in to your own account using the following credentials: `wiener:peter`.
 
-A list of possible delimiter characters is provided to help solve the lab: [Web cache deception lab delimiter list](https://portswigger.net/web-security/web-cache-deception/wcd-lab-delimiter-list).
+A list of possible delimiter characters is provided to assist with the lab: [Web cache deception lab delimiter list](https://portswigger.net/web-security/web-cache-deception/wcd-lab-delimiter-list).
 
 ---
 
 ## 1. Detection
 
-- Accessed the lab, clicked `My Account`, and logged in with `wiener:peter`, landing on `/my-account` with `wiener`'s username and API key displayed.
-- The goal was to get the API key for `carlos` — meaning the victim's account page needed to be cached and then read back.
-- Sent a normal request to `/my-account` and inspected the response headers:
+- Accessed the lab, clicked `My Account`, and logged in with `wiener:peter`. Was redirected to `/my-account` which displayed the username and API key for `wiener`.
+- The goal was to get `carlos`'s API key — which would only appear on his `/my-account` page while he's authenticated. The attack vector: trick the cache into storing the contents of `carlos`'s `/my-account` page as if it were a static, publicly cacheable resource, then retrieve it.
+- Sent a normal request to `/my-account`:
 
 ```http
 GET /my-account HTTP/2
@@ -36,30 +36,32 @@ Accept-Language: en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7
 Priority: u=0, i
 ```
 
-- No `X-Cache` or `Cache-Control` headers were present in the response — expected, since `/my-account` is dynamic, user-specific content and isn't meant to be cached publicly.
+- Checked the response for `X-Cache` and `Cache-Control` headers — neither was present. This is expected: `/my-account` contains sensitive, user-specific content that should never be publicly cached.
 
 ---
 
-## 2. Identifying Cacheable Paths
+## 2. Identifying the Cache Boundary
 
-- Checked requests to static asset paths like `/resources/js/` and found that anything under `/resources` returned `X-Cache` and `Cache-Control` headers in the response — confirming the cache layer was storing responses for paths starting with `/resources`.
-- The idea: trick the cache into treating a request to `/my-account` as if it were a static resource under `/resources`, so the cache stores the response (which contains the victim's API key) and serves it to anyone who requests the same URL.
+- Checked requests for static resources (e.g. `/resources/js/...`). These responses did include `X-Cache` and `Cache-Control` headers, confirming the cache layer stores anything under the `/resources/` path prefix.
+- This suggested the cache's caching rules were path-prefix based: anything starting with `/resources` gets cached; everything else doesn't.
 
 ---
 
-## 3. Finding the Path Traversal Trick
+## 3. Crafting the Cache Poisoning Path
 
-- First tried `/resources/../my-account` — sending this request returned `X-Cache` and `Cache-Control` response headers, confirming the cache layer was treating this path as cacheable (since it starts with `/resources`).
-- However, testing this URL directly in an incognito browser window resulted in a redirect to `/my-account` — the browser normalized the `../` path traversal and resolved it to the actual path before sending the request, defeating the purpose.
-- The fix: URL-encode the `/` in `../` as `%2f`, giving `/resources/..%2fmy-account`. The browser doesn't normalize `%2f` into a real `/` before sending the request, so the URL reaches the server as-is. The cache layer sees `/resources/..%2fmy-account` and considers it a cacheable static path. The origin server, however, normalizes the encoded slash and resolves the path traversal, ultimately serving the `/my-account` page content — which then gets cached under that URL.
+- Tried requesting `/resources/../my-account` — a path traversal that the origin server would normalise to `/my-account`, serving the account page content. The response did include `X-Cache` and `Cache-Control` headers, confirming the cache layer stored it.
+- However, testing the same URL in an incognito browser showed it was being **redirected** to `/my-account`. The browser itself normalises `..` in URLs before sending the request, resolving `/resources/../my-account` to `/my-account` — which bypasses the cache entirely since that path isn't under `/resources/`.
+- The fix: URL-encode the `/` in `../` as `%2f`, giving `/resources/..%2fmy-account`. The browser no longer normalises this because `%2f` is not treated as a path separator at the browser level — so the request is sent to the server with the path literally as `/resources/..%2fmy-account`.
+- The origin server, however, **does** decode `%2f` back to `/` during path normalisation, resolving the path to `/my-account` and serving the account page. The cache layer sees the incoming path as `/resources/..%2fmy-account` — which starts with `/resources/` — and stores the response under that key.
+- This is the discrepancy at the heart of the vulnerability: the **cache** uses the raw, encoded URL as the cache key (treats it as a static resource path), while the **origin server** normalises the encoded path and serves the dynamic `/my-account` content. The same response is stored and served to anyone who requests `/resources/..%2fmy-account`, regardless of their session.
 
-> **Why this works:** The cache and the origin server handle the URL differently. The cache evaluates the raw URL string and decides whether to cache based on the `/resources` prefix — so `/resources/..%2fmy-account` looks like a static resource path and gets cached. The origin server decodes `%2f` back into `/` and processes `/resources/../my-account` as a path traversal, serving the actual `/my-account` page. The mismatch between how the two components normalize the URL is the core of the vulnerability — the cache stores sensitive, dynamic content under a URL that looks static and is publicly accessible.
+> **Why this works:** Web cache deception relies on a mismatch between what the cache considers "cacheable" and what the origin server actually serves. Here, the cache keys on the literal request path and sees `/resources/..%2fmy-account` as a static file under the resources directory — a cache-worthy path. The origin server decodes the percent-encoded slash, resolves the path traversal, and serves the sensitive `/my-account` page. When `carlos` is tricked into visiting this URL while logged in, the cache stores his authenticated account page response. Any subsequent visitor can then retrieve it from the cache without authentication.
 
 ---
 
 ## 4. Solve the Challenge
 
-- Crafted the exploit payload to redirect the victim (`carlos`) to the path traversal URL, causing their authenticated `/my-account` page to be stored in the cache under that URL:
+- Crafted an exploit payload that redirects `carlos`'s browser to the poisoned URL, causing the cache to store his authenticated `/my-account` page response:
 
 ```html
 <script>
@@ -67,6 +69,12 @@ document.location = "https://0a0f0088046a7881837b46d00058000c.web-security-acade
 </script>
 ```
 
-- Delivered this to the victim via the exploit server. When `carlos` visited the page, his browser was redirected to `/resources/..%2fmy-account`, which the origin server served as `/my-account` (with his session cookie attached, so his API key was in the response). The cache stored that response.
-- Navigated to `/resources/..%2fmy-account` without any session cookie — the cache served back `carlos`'s account page, including his API key.
+- Delivered this to the victim via the exploit server. When `carlos` visited it, his browser was redirected to `/resources/..%2fmy-account`, his authenticated account page was served by the origin and stored by the cache under that path.
+- Visited `/resources/..%2fmy-account` unauthenticated — got `carlos`'s account page back from the cache, including his API key:
+
+```
+Your username is: carlos
+Your API Key is: HiPqEbRe01LvWqFuouBkht1g2Tx2uz2z
+```
+
 - Submitted the API key. Lab solved.
