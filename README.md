@@ -193,6 +193,7 @@ xxe/
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [wcd/lab-1.md](./wcd/lab-1.md)   | Exploiting Path Mapping for Web Cache Deception                                     |
 | [wcd/lab-2.md](./wcd/lab-2.md)   | Exploiting Path Delimiters for Web Cache Deception                                  |
+| [wcd/lab-3.md](./wcd/lab-3.md)   | Exploiting origin server normalization for web cache deception                      |
 
 ---
 
